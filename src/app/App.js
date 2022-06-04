@@ -6,7 +6,7 @@ import Users from "./layouts/users";
 import Login from "./layouts/login";
 import Main from "./layouts/main";
 import NavBar from "./components/ui/navBar";
-import { ProfessionProvaider } from "../app/hooks/useProfession";
+import { ProfessionProvaider } from "./hooks/useProfession";
 import { QualitiesProvider } from "../app/hooks/useQualities";
 
 function App() {

@@ -20,6 +20,7 @@ const UsersListPage = () => {
     console.log(users);
 
     const handleDelete = (userId) => {
+        // setUsers(users.filter((user) => user._id !== userId));
         console.log(userId);
     };
     const handleToggleBookMark = (id) => {

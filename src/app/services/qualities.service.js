@@ -1,5 +1,5 @@
 import httpService from "./http.service";
-const qualityEndpoint = "http://localhost:4000/api/v1/quality/";
+const qualityEndpoint = "/quality";
 
 const qualityService = {
     get: async (id) => {

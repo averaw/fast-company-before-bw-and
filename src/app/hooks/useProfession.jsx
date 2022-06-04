@@ -36,6 +36,7 @@ export const ProfessionProvaider = ({ children }) => {
     }
     function errorCatcher(error) {
         const { message } = error.response.data;
+
         setError(message);
     }
 
@@ -51,5 +52,6 @@ ProfessionProvaider.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
-    ])
+    ]),
+    message: PropTypes.string
 };
