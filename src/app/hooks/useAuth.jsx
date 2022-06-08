@@ -34,10 +34,18 @@ export const AuthProvaider = ({ children }) => {
             const { code, message } = error.response.data.error;
             console.log(code, message);
             if (code === 400) {
-                const errorObject = {
-                    email: "Пользователя с таким email не существует "
-                };
-                throw errorObject;
+                if (message === "INVALID_PASSWORD") {
+                    const errorObject = {
+                        password: "Пароль указан неверно "
+                    };
+                    throw errorObject;
+                }
+                if (message === "EMAIL_NOT_FOUND") {
+                    const errorObject = {
+                        email: "Пользователя с таким email не существует "
+                    };
+                    throw errorObject;
+                }
             }
         }
     }
